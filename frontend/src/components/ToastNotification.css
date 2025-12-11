@@ -1,0 +1,63 @@
+/* Minimal Black & White Toast Theme */
+.Toastify__toast-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.Toastify__toast {
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+  padding: 16px;
+  min-height: 64px;
+}
+
+.Toastify__toast--success {
+  background-color: #000;
+  color: white;
+}
+
+.Toastify__toast--error {
+  background-color: #dc2626;
+  color: white;
+}
+
+.Toastify__toast--warning {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.Toastify__toast--info {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.Toastify__progress-bar {
+  height: 3px;
+}
+
+.Toastify__progress-bar--success {
+  background: white;
+}
+
+.Toastify__progress-bar--error {
+  background: white;
+}
+
+.Toastify__progress-bar--warning {
+  background: white;
+}
+
+.Toastify__progress-bar--info {
+  background: white;
+}
+
+.Toastify__close-button {
+  color: white;
+  opacity: 0.7;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}

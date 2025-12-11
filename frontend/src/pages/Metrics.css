@@ -1,0 +1,291 @@
+.metrics-page {
+  min-height: 100vh;
+  background: #fafafa;
+}
+
+.metrics-header {
+  background: white;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 32px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metrics-header h1 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.back-button {
+  padding: 12px 24px;
+  background: white;
+  color: #000;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.back-button:hover {
+  border-color: #000;
+  transform: translateY(-2px);
+}
+
+.metrics-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.metrics-section {
+  margin-bottom: 80px;
+}
+
+.metrics-section h2 {
+  font-size: 42px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 48px 0;
+  letter-spacing: -0.02em;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.metric-card {
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 40px 32px;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  border-color: #d0d0d0;
+}
+
+.metric-value {
+  font-size: 48px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.02em;
+}
+
+.metric-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Recent Tasks */
+.recent-tasks,
+.top-annotators {
+  background: white;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 40px;
+  margin-top: 40px;
+}
+
+.recent-tasks h3,
+.top-annotators h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 32px 0;
+}
+
+.tasks-list,
+.annotators-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task-item,
+.annotator-item {
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+.task-item:hover,
+.annotator-item:hover {
+  background: #f5f5f5;
+  border-color: #d0d0d0;
+}
+
+.task-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.task-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.task-status {
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.3px;
+  border: 1px solid;
+}
+
+.task-status.completed {
+  background: #f5f5f5;
+  color: #666;
+  border-color: #e0e0e0;
+}
+
+.task-status.claimed,
+.task-status.in_progress {
+  background: #000;
+  color: white;
+  border-color: #000;
+}
+
+.task-status.available {
+  background: white;
+  color: #000;
+  border-color: #e0e0e0;
+}
+
+.task-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: #666;
+}
+
+.annotator-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.annotator-rank {
+  width: 48px;
+  height: 48px;
+  background: #000;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.annotator-info {
+  flex: 1;
+}
+
+.annotator-name {
+  font-size: 17px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 6px;
+}
+
+.annotator-stats {
+  font-size: 14px;
+  color: #666;
+}
+
+.metrics-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .metrics-section h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .metrics-header {
+    padding: 24px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .metrics-header h1 {
+    font-size: 28px;
+  }
+
+  .back-button {
+    width: 100%;
+  }
+
+  .metrics-content {
+    padding: 40px 20px;
+  }
+
+  .metrics-section {
+    margin-bottom: 60px;
+  }
+
+  .metrics-section h2 {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .metric-card {
+    padding: 32px 24px;
+  }
+
+  .metric-value {
+    font-size: 40px;
+  }
+
+  .recent-tasks,
+  .top-annotators {
+    padding: 28px 20px;
+  }
+}
