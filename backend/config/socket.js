@@ -1,6 +1,19 @@
 const socketConfig = {
     cors: {
-        origin: process.env.SOCKET_CORS_ORIGIN || 'http://localhost:3000',
+        origin: (origin, callback) => {
+            const allowedOrigins = [
+                'http://localhost:3000',
+                'https://tagmaster.vercel.app',
+                'https://tagmaster-seven.vercel.app',
+                process.env.SOCKET_CORS_ORIGIN
+            ].filter(Boolean);
+
+            if (!origin || allowedOrigins.indexOf(origin) !== -1 || allowedOrigins.some(o => origin.startsWith(o))) {
+                callback(null, true);
+            } else {
+                callback(new Error('Not allowed by CORS'));
+            }
+        },
         methods: ['GET', 'POST'],
         credentials: true
     },
